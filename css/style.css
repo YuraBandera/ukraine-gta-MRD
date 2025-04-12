@@ -1,47 +1,112 @@
+
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background: #f0f0f5;
-  color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #0057b7, #ffd700);
+    color: #fff;
+    scroll-behavior: smooth;
 }
 header {
-  background: #003366;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
-nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-}
-nav ul li {
-  margin: 0 15px;
-}
-nav ul li a {
-  color: white;
-  text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 1rem 0;
 }
 .container {
-  padding: 40px 20px;
-  max-width: 1000px;
-  margin: auto;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
 }
-.gallery {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
+.logo {
+    width: 80px;
+    height: auto;
 }
-.gallery img {
-  width: 200px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s;
+}
+nav ul li a:hover {
+    background: rgba(255,255,255,0.2);
+    border-radius: 5px;
+}
+.section {
+    padding: 3rem 1rem;
+}
+.btn {
+    display: inline-block;
+    background-color: #0047ab;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+.btn:hover {
+    background-color: #003480;
+}
+.decisions-list, .news-list {
+    list-style: none;
+    padding: 0;
+    line-height: 1.8;
 }
 footer {
-  background: #003366;
-  color: white;
-  padding: 20px;
-  text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 1rem;
+}
+.gallery img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid white;
+}
+input[type="text"] {
+    padding: 0.5rem;
+    width: 60%;
+    border: none;
+    border-radius: 5px;
+}
+.dark-theme {
+    background: linear-gradient(135deg, #111, #333);
+    color: #ddd;
+}
+.dark-theme nav ul li a {
+    color: #ddd;
+}
+.dark-theme .btn {
+    background-color: #222;
+}
+#theme-btn {
+    background: none;
+    border: 2px solid white;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 1rem;
 }

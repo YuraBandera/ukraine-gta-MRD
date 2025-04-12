@@ -1,71 +1,124 @@
+
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Міська Рада Дніпра</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Міська Рада Дніпра</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1 data-aos="fade-down">Міська Рада Дніпра</h1>
-      <nav>
-        <ul>
-          <li><a href="#about">Про нас</a></li>
-          <li><a href="#leadership">Керівництво</a></li>
-          <li><a href="#departments">Відділи</a></li>
-          <li><a href="#gallery">Галерея</a></li>
-          <li><a href="#contact">Контакти</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <header>
+        <div class="container">
+            <img src="images/gerb_dnipro.jpg" alt="Герб Дніпра" class="logo" />
+            <h1>Міська Рада Дніпра</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Головна</a></li>
+                    <li><a href="#about">Про місто</a></li>
+                    <li><a href="#decisions">Рішення ради</a></li>
+                    <li><a href="#news">Новини</a></li>
+                    <li><a href="#contacts">Контакти</a></li>
+                </ul>
+            
+        </nav>
+        <div class="theme-toggle">
+            <button id="theme-btn">🌙 / ☀️</button>
+        </div>
+    
+        </div>
+    </header>
 
-  <section id="about" data-aos="fade-up">
-    <div class="container">
-      <h2>Про місто</h2>
-      <img src="images/Герб_Дніпра.jpg" alt="Герб Дніпра" style="max-width:150px;">
-      <p>Дніпро — адміністративний центр з багатою історією та сучасною міською радою.</p>
-    </div>
-  </section>
+    <main>
+        <section id="home" class="section" data-aos="fade-up">
+            <div class="container">
+                <h2>Вітаємо у Дніпровській Міській Раді</h2>
+                <p>Офіційний сайт міста Дніпро. Слідкуйте за новинами, рішеннями та ініціативами ради.</p>
+                <a href="#news" class="btn">Дізнатись більше</a>
+            </div>
+        </section>
 
-  <section id="leadership" data-aos="fade-left">
-    <div class="container">
-      <h2>Керівництво</h2>
-      <p>Інформація про посадовців, департаменти та відповідальних осіб.</p>
-    </div>
-  </section>
+        <section id="about" class="section" data-aos="fade-right">
+            <div class="container">
+                <h2>Про місто</h2>
+                <p>Дніпро — один із найбільших промислових, наукових та культурних центрів України, розташований на березі Дніпра.</p>
+            </div>
+        </section>
 
-  <section id="departments" data-aos="fade-right">
-    <div class="container">
-      <h2>Відділи</h2>
-      <p>Список структурних підрозділів міської ради.</p>
-    </div>
-  </section>
+        <section id="decisions" class="section" data-aos="fade-left">
+            <div class="container">
+                <h2>Рішення ради</h2>
+                <ul class="decisions-list">
+                    <li>✅ Про затвердження бюджету на 2025 рік</li>
+                    <li>✅ Розвиток інфраструктури міста</li>
+                    <li>✅ Підтримка освіти та медицини</li>
+                </ul>
+            </div>
+        </section>
 
-  <section id="gallery" data-aos="zoom-in">
-    <div class="container">
-      <h2>Галерея</h2>
-      <div class="gallery">
-        <img src="images/Герб_Дніпра.jpg" alt="Фото 1">
-        <img src="images/Герб_Дніпра.jpg" alt="Фото 2">
-      </div>
-    </div>
-  </section>
+        <section id="news" class="section" data-aos="fade-up">
+            <div class="container">
+                <h2>Новини</h2>
+                <p>Останні події в місті:</p>
+                <ul class="news-list">
+                    <li>📅 12 квітня 2025 — Відкриття нового скверу в центрі</li>
+                    <li>📅 10 квітня 2025 — Ремонт доріг на Лівому березі</li>
+                    <li>📅 8 квітня 2025 — Засідання ради щодо питань безпеки</li>
+                </ul>
+            </div>
+        </section>
 
-  <footer id="contact">
-    <div class="container">
-      <p>Контакти: просп. Дмитра Яворницького, 75, Дніпро</p>
-      <p>&copy; 2025 Міська Рада Дніпра</p>
-    </div>
-  </footer>
+        <section id="contacts" class="section" data-aos="zoom-in">
+            <div class="container">
+                <h2>Контакти</h2>
+                <p>📍 Адреса: м. Дніпро, просп. Дмитра Яворницького, 75</p>
+                <p>📞 Телефон: +380 (56) 123 45 67</p>
+                <p>✉️ Email: info@dnipro.gov.ua</p>
+            </div>
+        </section>
+    
+        <section id="aboutus" class="section" data-aos="zoom-in-up">
+            <div class="container">
+                <h2>Про нас</h2>
+                <p>Міська Рада Дніпра — головний орган місцевого самоврядування. Ми працюємо для вас, мешканців нашого міста, щоб зробити життя комфортнішим та безпечнішим.</p>
+            </div>
+        </section>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="js/script.js"></script>
-  <script>
-    AOS.init();
-  </script>
+        <section id="gallery" class="section" data-aos="zoom-in">
+            <div class="container">
+                <h2>Галерея</h2>
+                <div class="gallery">
+                    <img src="images/gerb_dnipro.jpg" alt="Герб 1" />
+                    <img src="images/gerb_dnipro.jpg" alt="Герб 2" />
+                    <img src="images/gerb_dnipro.jpg" alt="Герб 3" />
+                </div>
+            </div>
+        </section>
+
+        <section id="weather" class="section" data-aos="fade-up">
+            <div class="container">
+                <h2>Погода у Дніпрі</h2>
+                <iframe src="https://forecast7.com/en/48d457d05/dnipro/" frameborder="0" width="100%" height="200"></iframe>
+            </div>
+        </section>
+
+        <section id="search" class="section" data-aos="fade-up">
+            <div class="container">
+                <h2>Пошук</h2>
+                <input type="text" id="searchInput" placeholder="Введіть запит..." />
+                <p id="searchResult"></p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2025 Міська Рада Дніпра. Усі права захищено.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
 </body>
 </html>

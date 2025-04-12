@@ -1,4 +1,4 @@
 
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("Сайт завантажено");
+  console.log("Анімований сайт Міської Ради Дніпра завантажено.");
 });

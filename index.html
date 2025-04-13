@@ -4,9 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Міська Рада Дніпра</title>
+
+    <!-- Підключення стилів -->
     <link rel="stylesheet" href="css/style.css" />
-    <script src="js/script.js" defer></script>
+    
+    <!-- Підключення бібліотеки для анімацій AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Підключення JavaScript для змінної теми та інших функцій -->
+    <script src="js/script.js" defer></script>
 </head>
 <body>
     <header>
@@ -22,13 +28,16 @@
                     <li><a href="#contacts">Контакти</a></li>
                 </ul>
             </nav>
-            <div class="theme-toggle">
-                <button id="theme-btn">🌙 / ☀️</button>
-            </div>
+        </div>
+
+        <!-- Кнопка для зміни теми -->
+        <div class="theme-toggle">
+            <button id="theme-btn">🌙 / ☀️</button>
         </div>
     </header>
 
     <main>
+        <!-- Розділ "Головна" -->
         <section id="home" class="section" data-aos="fade-up">
             <div class="container">
                 <h2>Вітаємо у Дніпровській Міській Раді</h2>
@@ -37,6 +46,7 @@
             </div>
         </section>
 
+        <!-- Розділ "Про місто" -->
         <section id="about" class="section" data-aos="fade-right">
             <div class="container">
                 <h2>Про місто</h2>
@@ -44,44 +54,26 @@
             </div>
         </section>
 
+        <!-- Розділ "Рішення ради" -->
         <section id="decisions" class="section" data-aos="fade-left">
             <div class="container">
                 <h2>Рішення ради</h2>
-                <input type="text" id="searchInput" placeholder="Пошук рішень..." />
-                <p id="searchResult"></p>
-                <table id="decisionsTable">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Назва рішення</th>
-                            <th>Дата</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Про затвердження бюджету на 2025 рік</td>
-                            <td>01.01.2025</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Розвиток інфраструктури міста</td>
-                            <td>15.02.2025</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Підтримка освіти та медицини</td>
-                            <td>20.03.2025</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <ul class="decisions-list">
+                    <li>✅ Про затвердження бюджету на 2025 рік</li>
+                    <li>✅ Розвиток інфраструктури міста</li>
+                    <li>✅ Підтримка освіти та медицини</li>
+                </ul>
+                <div>
+                    <input type="text" id="searchInput" placeholder="Пошук по рішенням..." />
+                    <p id="searchResult"></p>
+                </div>
             </div>
         </section>
 
+        <!-- Розділ "Новини" -->
         <section id="news" class="section" data-aos="fade-up">
             <div class="container">
                 <h2>Новини</h2>
-                <p>Останні події в місті:</p>
                 <ul class="news-list">
                     <li>📅 12 квітня 2025 — Відкриття нового скверу в центрі</li>
                     <li>📅 10 квітня 2025 — Ремонт доріг на Лівому березі</li>
@@ -90,6 +82,7 @@
             </div>
         </section>
 
+        <!-- Розділ "Контакти" -->
         <section id="contacts" class="section" data-aos="zoom-in">
             <div class="container">
                 <h2>Контакти</h2>
@@ -100,12 +93,8 @@
         </section>
     </main>
 
-    <footer>
-        <p>© 2025 Міська Рада Дніпра. Усі права захищено.</p>
-    </footer>
-
+    <!-- Підключення скриптів для анімацій AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>AOS.init();</script>
-    <script src="js/script.js"></script>
 </body>
 </html>

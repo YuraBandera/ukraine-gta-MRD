@@ -1,4 +1,9 @@
-// Додаємо функцію фільтрації рішень
+// Перемикання між темною і світлою темою
+document.getElementById("theme-btn").addEventListener("click", () => {
+    document.body.classList.toggle("dark-theme");
+});
+
+// Функція фільтрації рішень
 function filterDecisions() {
     const input = document.getElementById("searchInput");
     const filter = input.value.toLowerCase();
@@ -9,6 +14,7 @@ function filterDecisions() {
         const cells = rows[i].getElementsByTagName("td");
         let match = false;
 
+        // Перевірка кожної клітинки в рядку
         for (let j = 1; j < cells.length; j++) {
             const cell = cells[j];
             if (cell) {
@@ -18,6 +24,7 @@ function filterDecisions() {
             }
         }
 
+        // Показати або сховати рядок в залежності від результатів фільтрації
         if (match) {
             rows[i].style.display = "";
         } else {
@@ -26,7 +33,10 @@ function filterDecisions() {
     }
 }
 
-// Тема темного режиму
-document.getElementById("theme-btn").addEventListener("click", () => {
-    document.body.classList.toggle("dark-theme");
+// Додаємо слухач події для пошуку
+document.getElementById("searchInput").addEventListener("keyup", filterDecisions);
+
+// Ініціалізація бібліотеки AOS для анімацій
+document.addEventListener("DOMContentLoaded", () => {
+    AOS.init();
 });

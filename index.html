@@ -17,7 +17,7 @@
                 <ul>
                     <li><a href="#home">Головна</a></li>
                     <li><a href="#about">Про місто</a></li>
-                    <li><a href="decisions.html">Рішення ради</a></li> <!-- Оновлене посилання -->
+                    <li><a href="#decisions">Рішення ради</a></li>
                     <li><a href="#news">Новини</a></li>
                     <li><a href="#contacts">Контакти</a></li>
                 </ul>
@@ -44,7 +44,40 @@
             </div>
         </section>
 
-        <!-- Секція рішень ради вже доступна через нову сторінку -->
+        <section id="decisions" class="section" data-aos="fade-left">
+            <div class="container">
+                <h2>Рішення ради</h2>
+                <input type="text" id="searchInput" placeholder="Пошук рішень..." />
+                <p id="searchResult"></p>
+                <table id="decisionsTable">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Назва рішення</th>
+                            <th>Дата</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Про затвердження бюджету на 2025 рік</td>
+                            <td>01.01.2025</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Розвиток інфраструктури міста</td>
+                            <td>15.02.2025</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Підтримка освіти та медицини</td>
+                            <td>20.03.2025</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
         <section id="news" class="section" data-aos="fade-up">
             <div class="container">
                 <h2>Новини</h2>
@@ -73,5 +106,6 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>AOS.init();</script>
+    <script src="js/script.js"></script>
 </body>
 </html>

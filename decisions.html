@@ -23,11 +23,15 @@
     </header>
 
     <main>
+        <!-- Розділ для рішень ради -->
         <section id="decisions" class="section" data-aos="fade-left">
             <div class="container">
                 <h2>Рішення ради</h2>
+                <!-- Пошуковий рядок для фільтрації -->
                 <input type="text" id="searchInput" placeholder="Пошук рішень..." />
                 <p id="searchResult"></p>
+
+                <!-- Таблиця для відображення рішень -->
                 <table id="decisionsTable">
                     <thead>
                         <tr>
@@ -54,6 +58,8 @@
                         </tr>
                     </tbody>
                 </table>
+
+                <!-- Список рішень -->
                 <ul class="decisions-list">
                     <li>✅ Про затвердження бюджету на 2025 рік</li>
                     <li>✅ Розвиток інфраструктури міста</li>
@@ -67,8 +73,13 @@
         <p>© 2025 Міська Рада Дніпра. Усі права захищено.</p>
     </footer>
 
+    <!-- Підключення скриптів для анімацій AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init();</script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- Підключення вашого власного JavaScript -->
     <script src="js/script.js"></script>
 </body>
 </html>

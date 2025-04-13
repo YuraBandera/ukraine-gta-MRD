@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Рішення Ради Дніпра</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="images/gerb_dnipro.jpg" alt="Герб Дніпра" class="logo" />
+            <h1>Рішення Ради Дніпра</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="decisions.html">Рішення ради</a></li>
+                    <li><a href="#news">Новини</a></li>
+                    <li><a href="#contacts">Контакти</a></li>
+                </ul>
+            </nav>
+            <div class="theme-toggle">
+                <button id="theme-btn">🌙 / ☀️</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="decisions" class="section" data-aos="fade-up">
+            <div class="container">
+                <h2>Рішення ради</h2>
+
+                <!-- Форма для фільтрації -->
+                <div class="filter">
+                    <input type="text" id="searchInput" placeholder="Пошук за рішеннями..." onkeyup="filterDecisions()" />
+                </div>
+
+                <!-- Таблиця рішень -->
+                <table id="decisionsTable" class="decisions-table">
+                    <thead>
+                        <tr>
+                            <th>№</th>
+                            <th>Назва рішення</th>
+                            <th>Дата</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Про затвердження бюджету на 2025 рік</td>
+                            <td>15.03.2025</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Розвиток інфраструктури міста</td>
+                            <td>12.04.2025</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Підтримка освіти та медицини</td>
+                            <td>10.05.2025</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Міська Рада Дніпра. Усі права захищено.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+</body>
+</html>

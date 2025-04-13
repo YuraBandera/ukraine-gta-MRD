@@ -1,37 +1,32 @@
-// Темна тема + збереження
-const themeBtn = document.getElementById("theme-btn");
-const userTheme = localStorage.getItem("theme");
+// Додаємо функцію фільтрації рішень
+function filterDecisions() {
+    const input = document.getElementById("searchInput");
+    const filter = input.value.toLowerCase();
+    const table = document.getElementById("decisionsTable");
+    const rows = table.getElementsByTagName("tr");
 
-if (userTheme === "dark") {
-    document.body.classList.add("dark-theme");
+    for (let i = 1; i < rows.length; i++) {
+        const cells = rows[i].getElementsByTagName("td");
+        let match = false;
+
+        for (let j = 1; j < cells.length; j++) {
+            const cell = cells[j];
+            if (cell) {
+                if (cell.innerText.toLowerCase().indexOf(filter) > -1) {
+                    match = true;
+                }
+            }
+        }
+
+        if (match) {
+            rows[i].style.display = "";
+        } else {
+            rows[i].style.display = "none";
+        }
+    }
 }
 
-themeBtn.addEventListener("click", () => {
+// Тема темного режиму
+document.getElementById("theme-btn").addEventListener("click", () => {
     document.body.classList.toggle("dark-theme");
-    const current = document.body.classList.contains("dark-theme") ? "dark" : "light";
-    localStorage.setItem("theme", current);
-});
-
-// Пошук
-const searchInput = document.getElementById("searchInput");
-const result = document.getElementById("searchResult");
-
-searchInput.addEventListener("input", function () {
-    const val = this.value.toLowerCase();
-    let text = "Нічого не знайдено";
-
-    if (val.includes("рада")) {
-        text = "Знайдено: Міська Рада Дніпра";
-    } else if (val.includes("місто")) {
-        text = "Знайдено: Про місто Дніпро";
-    }
-
-    result.textContent = text;
-    result.classList.add("show");
-
-    // Приховуємо результат через 3 секунди
-    clearTimeout(result._timeout);
-    result._timeout = setTimeout(() => {
-        result.classList.remove("show");
-    }, 3000);
 });

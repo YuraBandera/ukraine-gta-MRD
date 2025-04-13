@@ -1,46 +1,156 @@
-/* Стилі для фільтра */
-.filter {
-    margin-bottom: 20px;
+/* Основний стиль */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #0057b7, #ffd700);
+    color: #fff;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 1rem 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
     text-align: center;
 }
 
-#searchInput {
-    padding: 0.75rem;
-    width: 50%;
-    font-size: 1rem;
-    border: 1px solid #ccc;
+.logo {
+    width: 80px;
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 5px;
-    text-align: center;
 }
 
-/* Стилі для таблиці */
-.decisions-table {
+.section {
+    padding: 3rem 1rem;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #0047ab;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+.btn:hover {
+    background-color: #003480;
+}
+
+table {
     width: 100%;
+    margin-top: 1rem;
     border-collapse: collapse;
-    margin-top: 20px;
 }
 
-.decisions-table th, .decisions-table td {
-    padding: 10px;
+table th, table td {
+    padding: 0.8rem;
     text-align: left;
     border: 1px solid #ddd;
 }
 
-.decisions-table th {
-    background-color: #0047ab;
-    color: white;
+#searchInput {
+    padding: 0.5rem;
+    width: 60%;
+    border-radius: 5px;
+    border: 1px solid #ddd;
 }
 
-.decisions-table tr:nth-child(even) {
-    background-color: #f2f2f2;
+footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
 }
 
-.decisions-table tr:hover {
-    background-color: #ddd;
-}
-
-/* Тема темного режиму */
 .dark-theme {
     background: linear-gradient(135deg, #111, #333);
     color: #ddd;
+}
+
+.dark-theme nav ul li a {
+    color: #ddd;
+}
+
+.dark-theme .btn {
+    background-color: #222;
+}
+
+#theme-btn {
+    background: none;
+    border: 2px solid white;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 1rem;
+}
+
+/* Адаптивність */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Анімації (AOS) */
+[data-aos="fade-up"] {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s, transform 1s;
+}
+
+[data-aos="fade-up"].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+[data-aos="fade-right"] {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 1s, transform 1s;
+}
+
+[data-aos="fade-right"].aos-animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+[data-aos="zoom-in"] {
+    opacity: 0;
+    transform: scale(0.5);
+    transition: opacity 1s, transform 1s;
+}
+
+[data-aos="zoom-in"].aos-animate {
+    opacity: 1;
+    transform: scale(1);
 }
